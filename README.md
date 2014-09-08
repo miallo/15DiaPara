@@ -1,2 +1,2 @@
-15KennDiode
+15DiaPara
 ===========
