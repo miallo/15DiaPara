@@ -1,0 +1,12 @@
+cds
+git pull
+cdm
+git pull
+cdw
+git pull
+cdd
+git pull
+cdt
+git pull
+cde
+git pull
