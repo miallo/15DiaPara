@@ -36,10 +36,15 @@ Wismut_h=np.mean(Wismut_hoehe)
 Wismut_hsig=np.std(Wismut_hoehe)
 Wismut_m=0.851#g
 Wismut_p=9.8#g*cm^-3
+
+#Was macht dieser Array???
 #                  I=0, I=1.4, I=1.2, I=1.0, I=0.8
 strom=np.array([[0.885, 0.889, 0.886, 0.886, 0.885],
                 [0.886, 0.888, 0.887, 0.887, 0.886],
                 [0.885, 0.887, 0.888, 0.886, 0.887]])
+                
+                
+                
 #               x   , I=1.4 I=1.2 I=1.0 I=0.8
 feld=np.array([[33, 0.166, 0.134, 0.104, 0.068],
                [38, 0.155, 0.126, 0.096, 0.061],

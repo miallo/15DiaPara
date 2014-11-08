@@ -43,14 +43,14 @@
 \usepackage{color}
 
 % Zur Graphikausgabe
-%Beipiel: \includegraphics[width=\textwidth]{grafik.png}
+%Beipiel: \includepdf[width=\textwidth]{grafik.png}
 \usepackage{graphicx}
 
 % Text umfließt Graphiken und Tabellen
 % Beispiel:
 % \begin{wrapfigure}[Zeilenanzahl]{"l" oder "r"}{breite}
 %   \centering
-%   \includegraphics[width=...]{grafik}
+%   \includepdf[width=...]{grafik}
 %   \caption{Beschriftung} 
 %   \label{fig:grafik}
 % \end{wrapfigure}
@@ -61,10 +61,10 @@
 % \begin{figure}[htb]
 %   \centering
 %   \subfigure[Beschriftung 1\label{fig:label1}]
-%   {\includegraphics[width=0.49\textwidth]{grafik1}}
+%   {\includepdf[width=0.49\textwidth]{grafik1}}
 %   \hfill
 %   \subfigure[Beschriftung 2\label{fig:label2}]
-%   {\includegraphics[width=0.49\textwidth]{grafik2}}
+%   {\includepdf[width=0.49\textwidth]{grafik2}}
 %   \caption{Beschriftung allgemein}
 %   \label{fig:label-gesamt}
 % \end{figure}
@@ -75,7 +75,7 @@
 % \sidecaptionvpos{figure}{"c" oder "t" oder "b"}
 % \begin{SCfigure}[rel. Breite (normalerweise = 1)][hbt]
 %   \centering
-%   \includegraphics[width=0.5\textwidth]{grafik.png}
+%   \includepdf[width=0.5\textwidth]{grafik.png}
 %   \caption{Beschreibung}
 %   \label{fig:}
 % \end{SCfigure}
@@ -111,6 +111,8 @@
 %keine Einrückung, wenn Latex doppelte Leerzeile
 \parindent0pt
 
+\usepackage{pdfpages}
+
 %Bibliography \bibliography{literatur} und \cite{gerthsen}
 %\usepackage{cite}
 \usepackage{babelbib}
@@ -143,8 +145,8 @@ Praktikant: &  Michael Lohmann\\
  &  felix.kurtz@stud.uni-goettingen.de\\
 % &  kevin.luedemann@stud.uni-goettingen.de\\
 % &  skrollan.detzler@stud.uni-goettingen.de\\
- Betreuer: & Martin Ochmann\\
- Versuchsdatum: & 26.05.2014\\
+ Betreuer: & Björn Klaas \\
+ Versuchsdatum: & 09.09.2014\\
 \end{tabular}
 \end{Large}
 
@@ -179,6 +181,41 @@ Um dies zu vermessen, kann man den zu untersuchenden Stoff in ein vorhandenes Ma
 
 \section{Auswertung}
 \label{sec:auswertung}
+Hallo
+\begin{figure}[h]
+\centering
+\includepdf{Aus1}
+\caption{Auswertung von Versuch 1}
+\label{fig:aus1}
+\end{figure}
+Na
+\begin{figure}[h]
+\centering
+\includepdf{Aus3}
+\caption{Auswertung von Versuch 3}
+\label{fig:aus3}
+\end{figure}
+Du
+\begin{figure}[h]
+\centering
+\includepdf{Aus61}
+\caption{Auswertung von Versuch 6 erster Teil}
+\label{fig:aus61}
+\end{figure}
+Wie
+\begin{figure}[h]
+\centering
+\includepdf{Aus62}
+\caption{Auswertung von Versuch 6 zweiter Teil}
+\label{fig:aus62}
+\end{figure}
+gehts?
+\begin{figure}[h]
+\centering
+\includepdf{Aus7}
+\caption{Auswertung von Versuch 7}
+\label{fig:aus7}
+\end{figure}
 
 \section{Diskussion}
 \label{sec:diskussion}
