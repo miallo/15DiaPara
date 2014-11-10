@@ -10,11 +10,12 @@ import maabara as ma
 #import scipy as sc
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.pyplot as plote
 import math as mt
 
 #daten holen
 data = np.genfromtxt("daten2.dat", delimiter="\t")
-data = data*[1, 0.1]
+data = data*[1, 1]
 Tantal_G=[1.0367,1.0372,1.0374]#g
 Tantal_M=[1.0383,1.0379,1.0381]
 Tantal_hoehe=[42.7]#mm
@@ -37,11 +38,11 @@ Wismut_hsig=np.std(Wismut_hoehe)
 Wismut_m=0.851#g
 Wismut_p=9.8#g*cm^-3
 
-#Was macht dieser Array???
+#Was macht dieser Array??? V8?
 #                  I=0, I=1.4, I=1.2, I=1.0, I=0.8
-strom=np.array([[0.885, 0.889, 0.886, 0.886, 0.885],
-                [0.886, 0.888, 0.887, 0.887, 0.886],
-                [0.885, 0.887, 0.888, 0.886, 0.887]])
+strom=np.array([[1.0367,1.0389,1.0380,1.0370,1.0380],
+                [1.0376,1.0381,1.0388,1.0367,1.0365],
+                [1.0355,1.0397,1.0376,1.0375,1.0362]])
                 
                 
                 
@@ -57,15 +58,16 @@ mue=4*mt.pi*10**(-7)
 gerd=-9.81
 
 #Auswertung 1
-plt.xlabel('Position X [mm]')
-plt.ylabel('Flussdichte B [T]')
-plt.errorbar(data[:,0],data[:,1],yerr=0.01,xerr=0.1,label='Messwerte', fmt='g.')
+plote.xlim(0,85)
+plote.xlabel('Position X [mm]')
+plote.ylabel('Flussdichte B [T]')
+plote.errorbar(data[:,0],data[:,1],yerr=0.01,xerr=0.1,label='Messwerte', fmt='g.')
 
 #Auswertung 2
 grad=np.gradient(data[:,1])
-plt.plot(data[:,0], grad, 'r.', label='Gradient')
-plt.legend(shadow=True, fancybox=True)
-plt.savefig('Aus1.pdf', format='pdf')
+plote.plot(data[:,0], grad, 'r.', label='Gradient')
+plote.legend(shadow=True, fancybox=True)
+plote.savefig('Aus1.pdf', format='pdf')
 print ("Werte für Tantal am Ort " + str(Tantal_h) + " \pm " + str(Tantal_hsig))
 print ("B= " + str(data[16][1]) + ", dB= " + str(grad[16]))
 Tantal_b=data[10][1]
@@ -151,10 +153,10 @@ plt.legend(shadow=True, fancybox=True)
 plt.savefig('Aus61.pdf', format='pdf')
 
 #Bild Grad B-Feld
-feld08=np.gradient(feld[:,4])
-feld10=np.gradient(feld[:,3])
-feld12=np.gradient(feld[:,2])
-feld14=np.gradient(feld[:,1])
+feld08=-np.gradient(feld[:,4])
+feld10=-np.gradient(feld[:,3])
+feld12=-np.gradient(feld[:,2])
+feld14=-np.gradient(feld[:,1])
 plt.clf()
 plt.plot(feld[:,0], feld08, 'r.', label='I=0.8 A')
 plt.plot(feld[:,0], feld10, 'g.', label='I=1.0 A')
@@ -191,6 +193,7 @@ np.append(force, np.array(wert))
 wert=Tantal_chisig*db14*Tantal_m*Tantal_p/mue
 np.append(forcesig, np.array(wert))
 """
+
 Stromi=[0.8, 1.0, 1.2, 1.4]
 f0=np.mean(strom[:,0])
 f0sig=np.std(strom[:,0])

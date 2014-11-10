@@ -43,14 +43,14 @@
 \usepackage{color}
 
 % Zur Graphikausgabe
-%Beipiel: \includepdf[width=\textwidth]{grafik.png}
+%Beipiel: \includegraphics[width=\textwidth]{grafik.png}
 \usepackage{graphicx}
 
 % Text umfließt Graphiken und Tabellen
 % Beispiel:
 % \begin{wrapfigure}[Zeilenanzahl]{"l" oder "r"}{breite}
 %   \centering
-%   \includepdf[width=...]{grafik}
+%   \includegraphics[width=...]{grafik}
 %   \caption{Beschriftung} 
 %   \label{fig:grafik}
 % \end{wrapfigure}
@@ -61,10 +61,10 @@
 % \begin{figure}[htb]
 %   \centering
 %   \subfigure[Beschriftung 1\label{fig:label1}]
-%   {\includepdf[width=0.49\textwidth]{grafik1}}
+%   {\includegraphics[width=0.49\textwidth]{grafik1}}
 %   \hfill
 %   \subfigure[Beschriftung 2\label{fig:label2}]
-%   {\includepdf[width=0.49\textwidth]{grafik2}}
+%   {\includegraphics[width=0.49\textwidth]{grafik2}}
 %   \caption{Beschriftung allgemein}
 %   \label{fig:label-gesamt}
 % \end{figure}
@@ -75,7 +75,7 @@
 % \sidecaptionvpos{figure}{"c" oder "t" oder "b"}
 % \begin{SCfigure}[rel. Breite (normalerweise = 1)][hbt]
 %   \centering
-%   \includepdf[width=0.5\textwidth]{grafik.png}
+%   \includegraphics[width=0.5\textwidth]{grafik.png}
 %   \caption{Beschreibung}
 %   \label{fig:}
 % \end{SCfigure}
@@ -111,7 +111,7 @@
 %keine Einrückung, wenn Latex doppelte Leerzeile
 \parindent0pt
 
-\usepackage{pdfpages}
+\usepackage{adjustbox}
 
 %Bibliography \bibliography{literatur} und \cite{gerthsen}
 %\usepackage{cite}
@@ -184,35 +184,35 @@ Um dies zu vermessen, kann man den zu untersuchenden Stoff in ein vorhandenes Ma
 Hallo
 \begin{figure}[h]
 \centering
-\includepdf{Aus1}
+\adjustbox{width=0.8\linewidth}{\includegraphics{Aus1}}
 \caption{Auswertung von Versuch 1}
 \label{fig:aus1}
 \end{figure}
 Na
 \begin{figure}[h]
 \centering
-\includepdf{Aus3}
+\adjustbox{width=0.8\linewidth}{\includegraphics{Aus3}}
 \caption{Auswertung von Versuch 3}
 \label{fig:aus3}
 \end{figure}
 Du
 \begin{figure}[h]
 \centering
-\includepdf{Aus61}
+\adjustbox{width=0.8\linewidth}{\includegraphics{Aus61}}
 \caption{Auswertung von Versuch 6 erster Teil}
 \label{fig:aus61}
 \end{figure}
 Wie
 \begin{figure}[h]
 \centering
-\includepdf{Aus62}
+\adjustbox{width=0.8\linewidth}{\includegraphics{Aus62}}
 \caption{Auswertung von Versuch 6 zweiter Teil}
 \label{fig:aus62}
 \end{figure}
 gehts?
 \begin{figure}[h]
 \centering
-\includepdf{Aus7}
+\adjustbox{width=0.8\linewidth}{\includegraphics{Aus7}}
 \caption{Auswertung von Versuch 7}
 \label{fig:aus7}
 \end{figure}
