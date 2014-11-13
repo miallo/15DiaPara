@@ -56,7 +56,7 @@ feld=np.array([[33, 0.166, 0.134, 0.104, 0.068],
 wicklungen=3220
 mue=4*mt.pi*10**(-7)
 gerd=-9.81
-
+plote.clf()
 #Auswertung 1
 plote.xlim(0,85)
 plote.xlabel('Position X [mm]')
@@ -68,6 +68,7 @@ grad=np.gradient(data[:,1])
 plote.plot(data[:,0], grad, 'r.', label='Gradient')
 plote.legend(shadow=True, fancybox=True)
 plote.savefig('Aus1.pdf', format='pdf')
+plote.clf()
 print ("Werte für Tantal am Ort " + str(Tantal_h) + " \pm " + str(Tantal_hsig))
 print ("B= " + str(data[16][1]) + ", dB= " + str(grad[16]))
 Tantal_b=data[10][1]
