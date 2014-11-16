@@ -174,12 +174,29 @@ Um dies zu vermessen, kann man den zu untersuchenden Stoff in ein vorhandenes Ma
 
 \section{Theorie}
 \label{sec:theorie}
+\subsection{Magnetfelder in Materie}
 Die Ausbreitung von Magnetfeldern in Materie erfolgt nach den \textsc{Maxwell}-Gleichungen durch
 \begin{align}
-	\vec B&=\mu_0\vec H+\mu_0\vec M\approx\mu_0\mu_r\vec H\text{ und}\\
-	\mu_r&=1+\chi
+	\vec B&=\mu_0\vec H+\mu_0\vec M\approx\mu_0\mu_r\vec H
 \end{align}
-\cite{demtroeder2}
+mit der magnetischen Suszeptibilität
+\begin{align}
+	\chi\vec M&=\vec H\\
+	\Rightarrow\mu_r&=1+\chi .
+\end{align}
+$\mu _r$ nennt man auch die relative Permiabilität.
+Dieser Zusammenhang gilt jedoch nach \cite[S. 112]{demtroeder2} nur für kleine magnetische Flussraten, da sonst $\vec M$ nicht mehr proportional zu $\vec H$ ist.
+
+\subsection{Hallsonde}
+Hallsonden funktionieren nach der Lorentzkraft.
+Ein Strom wird durch ein Metallplättchen geleitet.
+Ist dieses in einem Magnetfeld, so werden die Elektronen durch die Lorentzkraft abgelenkt.
+Dadurch baut sich jedoch ein elektrisches Feld auf, was sie wieder zurück lenkt.
+Durch den weiteren Weg steigt der Widerstand des durchflossenen Wegs.
+Dieser kann nun vermessen werden und daraus kann der verlängerte Weg bestimmt werden und daraus widerum das Magnetfeld.
+
+\subsection{Diamagnetismus}
+Diamagnetismus 
 
 \section{Durchführung}
 \label{sec:durchfuehrung}
@@ -206,13 +223,13 @@ Auch hier ist der Körper zwischen den Messungen anzustoßen.
 \begin{figure}[h]
 	\centering
 	\includegraphics{aufbau}
-	\caption{Aufbau der Waage zur Bestimmung der Kräfte.}
+	\caption{Aufbau der Waage zur Bestimmung der Kräfte nach \cite[15.11.14, 14 Uhr]{LP15}.}
 	\label{fig:aufbau}
 \end{figure}
 \begin{figure}[h]
 	\centering
 	\includegraphics{schaltkreis}
-	\caption{Schaltkreis zur Bestimmung von Dia- und Paramagnetismus.}
+	\caption{Schaltkreis zur Bestimmung von Dia- und Paramagnetismus nach \cite[15.11.14, 14 Uhr]{LP15}.}
 	\label{fig:schaltkreis}
 \end{figure}
 
