@@ -61,24 +61,24 @@ plote.clf()
 plote.xlim(0,85)
 plote.xlabel('Position X [mm]')
 plote.ylabel('Flussdichte B [T]')
-plote.errorbar(data[:,0],data[:,1]+0.65,yerr=0.01,xerr=0.1,label='Messwerte', fmt='g.')
+plote.errorbar(data[:,0],data[:,1],yerr=0.01,xerr=0.1,label='Messwerte', fmt='g.')
 
 #Auswertung 2
-grad=np.gradient(data[:,1]+0.65)
+grad=np.gradient(data[:,1])
 plote.plot(data[:,0], grad, 'r.', label='Gradient')
 plote.legend(shadow=True, fancybox=True)
 plote.savefig('Aus1.pdf', format='pdf')
 plote.clf()
 print ("Werte für Tantal am Ort " + str(Tantal_h) + " \pm " + str(Tantal_hsig))
-print ("B= " + str(data[16][1]+0.65) + ", dB= " + str(grad[16]))
+print ("B= " + str(data[16][1]) + ", dB= " + str(grad[16]))
 Tantal_b=data[10][1]
 Tantal_db=grad[10]
 print ("Werte für Manganoxid am Ort " + str(Manganoxid_h) + " \pm " + str(Manganoxid_hsig))
-print ("B= " + str(data[11][1]+0.65) + ", dB= " + str(grad[11]))
+print ("B= " + str(data[11][1]) + ", dB= " + str(grad[11]))
 Manganoxid_b=data[11][1]
 Manganoxid_db=grad[11]
 print ("Werte für Tantal am Ort " + str(Wismut_h) + " \pm " + str(Wismut_hsig))
-print ("B= " + str(data[5][1]+0.65) + ", dB= " + str(grad[5]))
+print ("B= " + str(data[5][1]) + ", dB= " + str(grad[5]))
 Wismut_b=data[5]
 Wismut_db=grad[5]
 
@@ -86,7 +86,7 @@ Wismut_db=grad[5]
 plt.clf()
 plt.xlabel('Position X [mm]')
 plt.ylabel('Flussdichte B [T]')
-produkt=grad*(data[:,1]+0.65)
+produkt=grad*data[:,1]
 plt.plot(data[:,0], produkt, 'r.', label='Produkt B und dB')
 plt.legend(shadow=True, fancybox=True)
 plt.savefig('Aus3.pdf', format='pdf')
