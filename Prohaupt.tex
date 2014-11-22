@@ -217,6 +217,22 @@ Dies hat Marie \textsc{Curie} entdeckt und es in dem folgenden Gesetz beschriebe
 \end{align*}
 mit der Materialkonstante $C$.
 
+\subsection{Energie des magnetischen Feldes}
+Nach \cite[S. 134]{demtroeder2} gilt für den Energiegehalt eines magnetischen Feldes
+\begin{align*}
+	W=-\int\frac{1}{2}\mu_0\mu_rH^2\cdot dV
+\end{align*}
+Ist das Feld im Inneren des Volumens annähernd konstant, so kann das Integral abgeschätzt werden durch
+\begin{align}
+	W\approx-\frac{1}{2}\mu_0\mu_rH^2\cdot V=-\frac{1}{2}\mu_0(1+\chi)H^2\cdot V=-\frac{1}{2}\mu_0H^2\cdot V-\frac{1}{2}\mu_0\chi H^2\cdot V\, .
+\end{align}
+was als Potential der Kraft aufgefasst werden kann.
+Der erste Term gibt die Energie es Vakuums an und verschwindet bei der Gradientbildung.
+Der zweite Teil ergibt im eindimensionalen Fall
+\begin{align}
+	F=-\nabla W=-\frac{\partial W}{\partial x}=-\frac{\chi V}{\mu_0}B\frac{\partial B}{\partial x}\, .\label{eq:GradW}
+\end{align}
+
 \section{Durchführung}
 \label{sec:durchfuehrung}
 Zunächst wird der Aufbau aus Abb. \ref{fig:schaltkreis} aufgebaut.
@@ -260,6 +276,12 @@ Hierbei kann man erkennen, dass zu Beginn das Magnetfeld stark steigt, bis es be
 Dies war auch zu erwarten, da die Polschuhe bei 10mm ihre geringste Entfernung hatten und danach sich linear voneinander entfernten.
 Der Gradient bestätigt dies, da er im Maximum annähernd 0 ist und an höheren Orten ungefähr konstant ist.
 
+Nach Gleichung \eqref{eq:GradW} gilt
+\begin{align}
+	F=-\frac{\chi V}{\mu_0}\cdot\frac{B\partial B}{\partial x}\, .
+\end{align}
+In Abb. \ref{fig:aus3} ist genau $\frac{B\partial B}{\partial x}$ aufgetragen gegen die jeweilige Position.
+
 
 \begin{figure}[h]
 \centering
@@ -294,6 +316,8 @@ Der Gradient bestätigt dies, da er im Maximum annähernd 0 ist und an höheren 
 
 \section{Diskussion}
 \label{sec:diskussion}
+In Abb. \ref{fig:aus3} fällt auf, dass die wirkende Kraft nach 30mm wieder höher wird.
+Dies ist möglicherweise darurch zu erklären, dass das Magnetfeld nicht homogen abnimmt, sondern Störungen besitzt.
 
 \bibliography{literatur}
 \bibliographystyle{babalpha}
