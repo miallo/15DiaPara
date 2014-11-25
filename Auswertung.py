@@ -109,7 +109,7 @@ Tantal_chi=7.6*10**(-5)
 Tantal_chisig=1.3*10**(-5)
 Tantal_chip=Tantal_chi/Tantal_p
 Tantal_chipsig=Tantal_chisig/Tantal_p
-print str(Tantal_chip) + " \pm " + str(Tantal_chipsig)
+print ("Tantal" + str(Tantal_chip) + " \pm " + str(Tantal_chipsig))
 
 #Manganoxid
 dm=np.array(Manganoxid_G)-np.array(Manganoxid_M)
@@ -124,7 +124,7 @@ Manganoxid_chi=3.3*10**(-5)
 Manganoxid_chisig=0.6*10**(-5)
 Manganoxid_chip=Manganoxid_chi/Manganoxid_p
 Manganoxid_chipsig=Manganoxid_chisig/Manganoxid_p
-print (str(Manganoxid_chip) + " \pm " + str(Manganoxid_chipsig))
+print ("Mangan" + str(Manganoxid_chip) + " \pm " + str(Manganoxid_chipsig))
 
 #Wismut
 dm=np.array(Wismut_G)-np.array(Wismut_M)
@@ -139,7 +139,7 @@ Wismut_chi=4.7*10**(-5)
 Wismut_chisig=0.8*10**(-5)
 Wismut_chip=Wismut_chi/Wismut_p
 Wismut_chipsig=Wismut_chisig/Wismut_p
-print (str(Wismut_chip) + " \pm " + str(Wismut_chipsig))
+print ("Wismut" + str(Wismut_chip) + " \pm " + str(Wismut_chipsig))
 
 #Auswertung 6
 #Bild B-Feld

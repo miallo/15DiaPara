@@ -245,7 +245,7 @@ Das sich ergebende Magnetfeld wird nun mit der \textsc{Hall}sonde bestimmt.
 Hierbei sollte die Schrittlänge 5mm nicht überschreiten.
 
 Daraufhin wird die Position zwischen den Polschuhen vermerkt, wenn man die Körper an die Analysewaage hängt.
-Anschließend werden die Massen der drei Probekörper (Ta, MnO$_2$ und Bi) aufgenommen.
+Anschließend werden die Massen der drei Probekörper (Ta, MnO$_2$ und Bi) aufgenommen, wie in Abb. \ref{fig:aufbau} zu erkennen ist.
 Dies geschieht je für ein- und ausgeschaltetes Magnetfeld.
 Diese Messungen werden je dreimal durchgeführt, wobei man zwischen den Messungen die Probekörper abnehmen oder zumindest anstoßen sollte.
 
@@ -308,18 +308,21 @@ Die durch das Magnetfeld ausgeübte Kraft $F$ berechnet sich nach
 wodurch sich $\chi$ berechnen lässt.
 Die jeweils drei Messungen der Kräfte wurden mit der Standardabweichung berechnet.
 
+Die Ergebnisse der spezifischen und magnetischen Suszeptibilitäten finden sich in Tabelle \ref{tab:suszep}.
+Dabei berechnet sich $\chi_\text{spez}=\chi/\rho$ mit $\rho$ nach \cite{formelsammlung}.
+
 \begin{table}
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\hline
-		Stoff 	& Masse [g]	& $\chi$ \\\hline\hline
-		Ta	& 0.911		& \\\hline
-		MnO2	& 0.455		& \\\hline
-		Bi	& 0.851		& \\\hline
+		Stoff 	& Masse [g]	& spez. Suszept. $\chi_\text{spez}$ [$10^{-6}$]	& mag. Suszep. $\chi$ [$10^{-5}$ \\\hline\hline
+		Ta	& 0.911		& $4.6\pm 0.8$ 			& $3.0 \pm 1.3$ \\\hline
+		MnO$_2$	& 0.455		& $6.6 \pm 1.2$			& $1.0 \pm 0.4$ \\\hline
+		Bi	& 0.851		& $-4.8 \pm 0.8 $		& $-1.3 \pm 0.6$\\\hline
 	\end{tabular}
-	\caption{<+Caption text+>}
-	\label{tab:<+label+>}
-\end{table}<++>
+	\caption{Errechnete spezifische und magnetische Suszeptibilitäten der vermessenen Proben.}
+	\label{tab:suszep}
+\end{table}
 
 
 \begin{figure}[h]
@@ -345,6 +348,10 @@ Die jeweils drei Messungen der Kräfte wurden mit der Standardabweichung berechn
 \label{sec:diskussion}
 In Abb. \ref{fig:aus3} fällt auf, dass die wirkende Kraft nach 30mm wieder höher wird.
 Dies ist möglicherweise darurch zu erklären, dass das Magnetfeld nicht homogen abnimmt, sondern Störungen besitzt.
+
+Den wohl größten Störeinfluss auf alle Messungen mit der Hallsonde hatte vermutlich der Offset der Hallsonde.
+Dieser schwankte zwischen -0.55 und -0.77T.
+Dies lässt keine qualifizierten Erkenntnisse der Messung zu, da die Messwerte weniger als 0.2T und somit die Schwankungen 30\% der Messwerte betrugen.
 
 \bibliography{literatur}
 \bibliographystyle{babalpha}
