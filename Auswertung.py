@@ -29,7 +29,7 @@ Manganoxid_hoehe=[49.4]
 Manganoxid_h=np.mean(Manganoxid_hoehe)
 Manganoxid_hsig=np.std(Manganoxid_hoehe)
 Manganoxid_m=0.455#g
-Manganoxid_p=5#g*cm^-3
+Manganoxid_p=5.0#g*cm^-3
 Wismut_G=[0.9493,0.9489,0.9503]
 Wismut_M=[0.9476,0.9488,0.9491]
 Wismut_hoehe=[21]
@@ -38,7 +38,6 @@ Wismut_hsig=np.std(Wismut_hoehe)
 Wismut_m=0.851#g
 Wismut_p=9.8#g*cm^-3
 
-#Was macht dieser Array??? V8?
 #                  I=0, I=1.4, I=1.2, I=1.0, I=0.8
 strom=np.array([[1.0367,1.0389,1.0380,1.0370,1.0380],
                 [1.0376,1.0381,1.0388,1.0367,1.0365],
@@ -69,15 +68,15 @@ plote.plot(data[:,0], grad, 'r.', label='Gradient')
 plote.legend(shadow=True, fancybox=True)
 plote.savefig('Aus1.pdf', format='pdf')
 plote.clf()
-print ("Werte für Tantal am Ort " + str(Tantal_h) + " \pm " + str(Tantal_hsig))
+print ("Werte für Tantal am Ort $" + str(Tantal_h) + " \pm " + str(Tantal_hsig)+"$")
 print ("B= " + str(data[16][1]+0.65) + ", dB= " + str(grad[16]))
 Tantal_b=data[10][1]
 Tantal_db=grad[10]
-print ("Werte für Manganoxid am Ort " + str(Manganoxid_h) + " \pm " + str(Manganoxid_hsig))
+print ("Werte für Mangandioxid am Ort $" + str(Manganoxid_h) + " \pm " + str(Manganoxid_hsig)+"$")
 print ("B= " + str(data[11][1]+0.65) + ", dB= " + str(grad[11]))
 Manganoxid_b=data[11][1]
 Manganoxid_db=grad[11]
-print ("Werte für Tantal am Ort " + str(Wismut_h) + " \pm " + str(Wismut_hsig))
+print ("Werte für Wismut am Ort $" + str(Wismut_h) + " \pm " + str(Wismut_hsig)+"$")
 print ("B= " + str(data[5][1]+0.65) + ", dB= " + str(grad[5]))
 Wismut_b=data[5]
 Wismut_db=grad[5]

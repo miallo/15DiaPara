@@ -315,14 +315,18 @@ Dabei berechnet sich $\chi_\text{spez}=\chi/\rho$ mit $\rho$ nach \cite{formelsa
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\hline
-		Stoff 	& Masse [g]	& spez. Suszept. $\chi_\text{spez}$ [$10^{-6}$]	& mag. Suszep. $\chi$ [$10^{-5}$ \\\hline\hline
+		Stoff 	& Masse [g]	& spez. Suszept. $\chi_\text{spez}$ [$10^{-6}$]	& mag. Suszep. $\chi$ [$10^{-5}$] \\\hline\hline
 		Ta	& 0.911		& $4.6\pm 0.8$ 			& $3.0 \pm 1.3$ \\\hline
-		MnO$_2$	& 0.455		& $6.6 \pm 1.2$			& $1.0 \pm 0.4$ \\\hline
+		Mn	& 0.455		& $6.6 \pm 1.2$			& $1.0 \pm 0.4$ \\\hline
 		Bi	& 0.851		& $-4.8 \pm 0.8 $		& $-1.3 \pm 0.6$\\\hline
 	\end{tabular}
 	\caption{Errechnete spezifische und magnetische Suszeptibilitäten der vermessenen Proben.}
 	\label{tab:suszep}
 \end{table}
+
+Mit Werten für Ta bei $42.7$ mm: $B= 0.711$, $dB= -0.015$\\
+Mn bei $49.4$ mm: $B= 0.762$, $dB= -0.007$\\
+Bi bei $21.0$ mm: $B= 0.817$, $dB= -0.01$
 
 \subsection{Flussdichte und Gradient verschiedener Stromstärken}
 In Abbildung \ref{fig:aus61} sind die gemessenen Flussdichten an verschiedenen Orten für verschiedene Stromstärken verzeichnet.
@@ -330,18 +334,18 @@ Dabei fällt auf, dass die Flussdichte nahezu linear für eine Stromstärke verl
 Dies bedeutet, dass die Stromstärke zwar die Feldstärke, nicht jedoch den Verlauf des Feldes beeinflusst.
 
 In Figur \ref{fig:aus62} ist der Gradient der Flussdichte für die obigen Messwerte eingetragen.
-Dieser ist jedoch nicht linear fallend, sondern (z.B. für $I=1,2\si\ampere$ veringert er sich zuerst und steigt dann auf einen höheren Wert, als zu Beginn) folgt nur annähernd einer fallenden Geraden
+Dieser ist jedoch nicht linear fallend, sondern (z.B. für $I=1,2\si\ampere$ veringert er sich zuerst und steigt dann auf einen höheren Wert, als zu Beginn) folgt nur annähernd einer fallenden Geraden.
 
 
 \begin{figure}[h]
 \centering
-\adjustbox{width=0.8\linewidth}{\includegraphics{Aus61}}
+\adjustbox{width=0.7\linewidth}{\includegraphics{Aus61}}
 \caption{Gemessene Flussdichten $B$ für verschiedene Stromstärken.}
 \label{fig:aus61}
 \end{figure}
 \begin{figure}[h]
 \centering
-\adjustbox{width=0.8\linewidth}{\includegraphics{Aus62}}
+\adjustbox{width=0.7\linewidth}{\includegraphics{Aus62}}
 \caption{Gradient $B'$ der Flussdichte für verschiedene Stromstärken.}
 \label{fig:aus62}
 \end{figure}
@@ -358,19 +362,26 @@ Das reduzierte $\chi^2$ des linearen Fits beträgt 0.75 und bestätigt damit die
 \begin{figure}[h]
 \centering
 \adjustbox{width=0.8\linewidth}{\includegraphics{Aus7}}
-\caption{Gemesene Kraft auf den Tantal-Probekörper bei verschiedenen Stromstärken zusammen mit der linearen Regression.}
+\caption{Gemessene Kraft auf den Tantal-Probekörper bei verschiedenen Stromstärken zusammen mit der linearen Regression.}
 \label{fig:aus7}
 \end{figure}
 
 \section{Diskussion}
 \label{sec:diskussion}
-In Abb. \ref{fig:aus3} fällt auf, dass die wirkende Kraft nach 30mm wieder höher wird.
+In Abb. \ref{fig:aus3} fällt auf, dass die wirkende Kraft (welche nach Gleichung \eqref{eq:GradW} proportional zu $BB'$ ist) nach 30mm wieder ansteigt.
 Dies ist möglicherweise darurch zu erklären, dass das Magnetfeld nicht homogen abnimmt, sondern Störungen besitzt.
 
 Den wohl größten Störeinfluss auf alle Messungen mit der Hallsonde hatte vermutlich der Offset der Hallsonde.
 Dieser schwankte zwischen -0.55 und -0.77T.
-Dies lässt keine qualifizierten Erkenntnisse der Messung zu, da die Messwerte weniger als 0.2T und somit die Schwankungen 30\% der Messwerte betrugen.
+Dies lässt keine qualifizierten Erkenntnisse der Messung zu, da die Messwerte weniger als 0.9T und somit die Schwankungen 30\% der Messwerte betrugen.\\
+Durch dies werden die Ergebnisse verfälscht.\\
 
+Die Testkörper hingen bei den Messungen meistens nicht still, da kleine Luftbewegungen die Massen immer wieder in Schwingungen versetzen.
+Die Analysewaage besitzt für Messungen auf der Waagfläche ein Glaskasten, der dies verhindern soll, jedoch werden bei unseren Messungen die Massen unten angehängt.\\
+
+Die Literaturwerte aus verschiedenen Büchern (z.B. \cite{gerthsen} und \cite{taschenbuch}) stimmen nicht überein.
+Jedoch sind auch die Größenordnungen der Messungen nicht korrekt.
+\newpage
 \bibliography{literatur}
 \bibliographystyle{babalpha}
 \end{document}
